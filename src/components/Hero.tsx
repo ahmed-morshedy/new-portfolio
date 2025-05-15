@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import img from "../assets/ahmedmorshedy.jpg";
 
 export default function Hero() {
   return (
@@ -140,11 +141,11 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
           >
-            <div className="relative h-[400px] md:h-[500px] w-full">
+            <div className="relative h-[400px] md:h-[500px] w-full hidden md:block">
               <div className="absolute top-0 right-0 w-[90%] h-[90%] bg-gradient-to-br from-primary-500/20 to-secondary-500/20 rounded-2xl backdrop-blur-sm border border-white/10 shadow-glass transform rotate-6"></div>
               <div className="absolute bottom-0 left-0 w-[90%] h-[90%] bg-gradient-to-br from-primary-500/30 to-secondary-500/30 rounded-2xl backdrop-blur-sm border border-white/10 shadow-glass overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+                  src={img.src}
                   alt="Developer"
                   className="h-full w-full object-cover"
                 />
@@ -156,7 +157,7 @@ export default function Hero() {
       </div>
 
       <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+        className="absolute bottom-8 block md:hidden left-1/2 transform -translate-x-1/2 flex flex-col items-center"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2, duration: 0.5 }}
