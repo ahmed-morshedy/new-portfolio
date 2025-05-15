@@ -2,7 +2,6 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import img from "../assets/ahmedmorshedy.jpg";
 
 export default function Hero() {
   return (
@@ -145,7 +144,7 @@ export default function Hero() {
               <div className="absolute top-0 right-0 w-[90%] h-[90%] bg-gradient-to-br from-primary-500/20 to-secondary-500/20 rounded-2xl backdrop-blur-sm border border-white/10 shadow-glass transform rotate-6"></div>
               <div className="absolute bottom-0 left-0 w-[90%] h-[90%] bg-gradient-to-br from-primary-500/30 to-secondary-500/30 rounded-2xl backdrop-blur-sm border border-white/10 shadow-glass overflow-hidden">
                 <img
-                  src={img.src}
+                  src={"/assets/ahmedmorshedy.jpg"}
                   alt="Developer"
                   className="h-full w-full object-cover"
                 />
