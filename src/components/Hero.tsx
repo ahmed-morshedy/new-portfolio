@@ -19,7 +19,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 z-10 pt-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 z-10 pt-12 md:pt-24">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           <motion.div
             className="lg:w-1/2"
