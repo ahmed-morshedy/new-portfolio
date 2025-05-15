@@ -135,7 +135,16 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   className="block px-3 py-3 text-base font-medium text-white hover:bg-white/5 rounded-lg transition-colors duration-200"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsMenuOpen(false);
+                    const element = document.querySelector(link.href);
+                    if (element) {
+                      setTimeout(() => {
+                        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }, 100);
+                    }
+                  }}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.2, delay: index * 0.05 }}
@@ -146,7 +155,16 @@ export default function Navbar() {
               <motion.a
                 href="#contact"
                 className="block px-4 py-3 mt-2 text-center rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 text-white text-base font-medium"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMenuOpen(false);
+                  const element = document.querySelector('#contact');
+                  if (element) {
+                    setTimeout(() => {
+                      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 100);
+                  }
+                }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.3, delay: 0.2 }}
